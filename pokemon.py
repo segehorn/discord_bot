@@ -63,7 +63,7 @@ def read_pokemon_csv(title):
     with open(title, 'r', encoding='utf-8') as f:
         reader = csv.DictReader(f, fieldnames=CSV_TITLE)
         result_list = [row for row in reader]
-
+    # 図鑑番号と名前のタプルリスト作成
     number_name_list = [(result['No.'], result['名前']) for result in result_list]
 
     return result_list, number_name_list
